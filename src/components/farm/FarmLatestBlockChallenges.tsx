@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import {
   Typography,
 } from '@material-ui/core';
-import { Link, Table, Card } from '@chia/core';
+import { Link, Table, Card } from '@aloe/core';
 import type { RootState } from '../../modules/rootReducer';
 import type { Row } from '../core/components/Table/Table';
 
@@ -68,13 +68,13 @@ export default function FarmLatestBlockChallenges() {
       />
       <Typography variant="caption">
         <Trans>
-          *Want to explore Chia’s blocks further? Check out{' '}
+          *Want to explore Aloe’s blocks further? Check out{' '}
           <Link
             color="primary"
-            href="https://www.chiaexplorer.com/"
+            href="https://www.aloeexplorer.com/"
             target="_blank"
           >
-            Chia Explorer
+            Aloe Explorer
           </Link>{' '}
           built by an open source developer.
         </Trans>

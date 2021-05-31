@@ -3,10 +3,10 @@ import { Trans } from '@lingui/macro';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../../../modules/rootReducer';
 import FarmCard from './FarmCard';
-import { mojo_to_chia } from '../../../util/chia';
+import { mojo_to_aloe } from '../../../util/aloe';
 import useCurrencyCode from '../../../hooks/useCurrencyCode';
 
-export default function FarmCardTotalChiaFarmed() {
+export default function FarmCardTotalAloeFarmed() {
   const currencyCode = useCurrencyCode();
 
   const loading = useSelector(
@@ -17,17 +17,17 @@ export default function FarmCardTotalChiaFarmed() {
     (state: RootState) => state.wallet_state.farmed_amount?.farmed_amount,
   );
 
-  const totalChiaFarmed = useMemo(() => {
+  const totalAloeFarmed = useMemo(() => {
     if (farmedAmount !== undefined) {
       const val = BigInt(farmedAmount.toString());
-      return mojo_to_chia(val);
+      return mojo_to_aloe(val);
     }
   }, [farmedAmount]);
 
   return (
     <FarmCard
-      title={<Trans>{currencyCode} Total Chia Farmed</Trans>}
-      value={totalChiaFarmed}
+      title={<Trans>{currencyCode} Total Aloe Farmed</Trans>}
+      value={totalAloeFarmed}
       loading={loading}
     />
   );
