@@ -19,7 +19,7 @@ import {
   CREATE_CC_WALLET_OPTIONS,
 } from '../../../modules/createWallet';
 import { useStyles } from './WalletCreate';
-import { aloe_to_mojo } from '../../../util/aloe';
+import { aloe_to_pups } from '../../../util/aloe';
 import { create_cc_for_colour_action } from '../../../modules/message';
 import { openDialog } from '../../../modules/dialog';
 
@@ -77,7 +77,7 @@ export const CreateExistingCCWallet = () => {
     }
     dispatch(createState(true, true));
     const colour = colour_string.value;
-    const fee = aloe_to_mojo(fee_input.value);
+    const fee = aloe_to_pups(fee_input.value);
     dispatch(create_cc_for_colour_action(colour, fee));
   }
 

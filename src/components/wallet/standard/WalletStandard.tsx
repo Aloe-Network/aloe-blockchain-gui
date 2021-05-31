@@ -23,7 +23,7 @@ import {
   send_transaction,
   farm_block,
 } from '../../../modules/message';
-import { mojo_to_aloe_string, aloe_to_mojo } from '../../../util/aloe';
+import { pups_to_aloe_string, aloe_to_pups } from '../../../util/aloe';
 import { openDialog } from '../../../modules/dialog';
 import { get_transaction_result } from '../../../util/transaction_result';
 import config from '../../../config/config';
@@ -213,7 +213,7 @@ function BalanceCardSubSection(props: BalanceCardSubSectionProps) {
         </Box>
         <Box>
           <Typography variant="subtitle1">
-            {mojo_to_aloe_string(props.balance)} {currencyCode}
+            {pups_to_aloe_string(props.balance)} {currencyCode}
           </Typography>
         </Box>
       </Box>
@@ -405,8 +405,8 @@ function SendCard(props: SendCardProps) {
       );
       return;
     }
-    const amount = aloe_to_mojo(amount_input.value);
-    const fee = aloe_to_mojo(fee_input.value);
+    const amount = aloe_to_pups(amount_input.value);
+    const fee = aloe_to_pups(fee_input.value);
 
     if (address.includes('colour')) {
       dispatch(

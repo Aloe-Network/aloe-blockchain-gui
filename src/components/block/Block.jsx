@@ -15,7 +15,7 @@ import {
   getBlockRecord,
   getBlock,
 } from '../../modules/fullnodeMessages';
-import { mojo_to_aloe } from '../../util/aloe';
+import { pups_to_aloe } from '../../util/aloe';
 import { calculatePoolReward, calculateBaseFarmerReward } from '../../util/blockRewards';
 import LayoutMain from '../layout/LayoutMain';
 import toBech32m from '../../util/toBech32m';
@@ -168,11 +168,11 @@ export default function Block() {
     ? blockRecord.weight - prevBlockRecord.weight
     : blockRecord?.weight ?? 0;
 
-  const poolReward = mojo_to_aloe(calculatePoolReward(blockRecord.height));
-  const baseFarmerReward = mojo_to_aloe(calculateBaseFarmerReward(blockRecord.height));
+  const poolReward = pups_to_aloe(calculatePoolReward(blockRecord.height));
+  const baseFarmerReward = pups_to_aloe(calculateBaseFarmerReward(blockRecord.height));
 
   const aloeFees = blockRecord.fees
-    ? mojo_to_aloe(BigInt(blockRecord.fees))
+    ? pups_to_aloe(BigInt(blockRecord.fees))
     : '';
 
   const rows = [

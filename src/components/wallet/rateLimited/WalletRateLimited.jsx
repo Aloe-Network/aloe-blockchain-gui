@@ -18,7 +18,7 @@ import {
   send_transaction,
   rl_set_user_info_action,
 } from '../../../modules/message';
-import { mojo_to_aloe_string, aloe_to_mojo } from '../../../util/aloe';
+import { pups_to_aloe_string, aloe_to_pups } from '../../../util/aloe';
 import { get_transaction_result } from '../../../util/transaction_result';
 import { openDialog } from '../../../modules/dialog';
 import WalletHistory from '../WalletHistory';
@@ -414,7 +414,7 @@ const RLDetailsCard = (props) => {
               <Typography variant="subtitle1">
                 <Trans>
                   Spending Limit (aloe per interval):{' '}
-                  {mojo_to_aloe_string(limit)}
+                  {pups_to_aloe_string(limit)}
                 </Trans>
               </Typography>
             </Box>
@@ -465,7 +465,7 @@ const RLDetailsCard = (props) => {
               <Typography variant="subtitle1">
                 <Trans>
                   Spending Limit (aloe per interval):{' '}
-                  {mojo_to_aloe_string(limit)}
+                  {pups_to_aloe_string(limit)}
                 </Trans>
               </Typography>
             </Box>
@@ -532,7 +532,7 @@ const BalanceCardSubSection = (props) => {
         </Box>
         <Box>
           <Typography variant="subtitle1">
-            {mojo_to_aloe_string(props.balance)} {currencyCode}
+            {pups_to_aloe_string(props.balance)} {currencyCode}
           </Typography>
         </Box>
       </Box>
@@ -696,8 +696,8 @@ const SendCard = (props) => {
       );
       return;
     }
-    const amount = aloe_to_mojo(amount_input.value);
-    const fee = aloe_to_mojo(fee_input.value);
+    const amount = aloe_to_pups(amount_input.value);
+    const fee = aloe_to_pups(fee_input.value);
 
     if (address.startsWith('0x') || address.startsWith('0X')) {
       address = address.slice(2);

@@ -20,7 +20,7 @@ import {
 } from '../../../modules/createWallet';
 import { useStyles } from './WalletCreate';
 import { create_rl_admin_action } from '../../../modules/message';
-import { aloe_to_mojo } from '../../../util/aloe';
+import { aloe_to_pups } from '../../../util/aloe';
 import { openDialog } from '../../../modules/dialog';
 
 export const customStyles = makeStyles((theme) => ({
@@ -166,12 +166,12 @@ export const CreateRLAdminWallet = () => {
     dispatch(createState(true, true));
     const interval = interval_input.value;
     const interval_value = Number.parseInt(Number(interval));
-    const aloeper = aloe_to_mojo(aloeper_input.value);
+    const aloeper = aloe_to_pups(aloeper_input.value);
     const aloeper_value = Number.parseInt(Number(aloeper));
     const userpubkey = userpubkey_input.value;
-    const amount = aloe_to_mojo(amount_input.value);
+    const amount = aloe_to_pups(amount_input.value);
     const amount_value = Number.parseInt(Number(amount));
-    // var fee = aloe_to_mojo(fee_input.value);
+    // var fee = aloe_to_pups(fee_input.value);
     // TODO(lipa): send fee to server
     // const fee_value = parseInt(Number(fee));
     dispatch(

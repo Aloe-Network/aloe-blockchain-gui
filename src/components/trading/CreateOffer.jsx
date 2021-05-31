@@ -16,8 +16,8 @@ import { AlertDialog, Card, Flex } from '@aloe/core';
 import isElectron from 'is-electron';
 import { newBuy, newSell, addTrade, resetTrades } from '../../modules/trade';
 import {
-  aloe_to_mojo,
-  colouredcoin_to_mojo,
+  aloe_to_pups,
+  colouredcoin_to_pups,
 } from '../../util/aloe';
 import { openDialog } from '../../modules/dialog';
 import { create_trade_action } from '../../modules/trade_messages';
@@ -90,13 +90,13 @@ export default function CreateOffer() {
       );
       return;
     }
-    const mojo = wallets[wallet_id.value].type === COLOURED_COIN
-      ? colouredcoin_to_mojo(amount_input.value)
-      : aloe_to_mojo(amount_input.value);
+    const pups = wallets[wallet_id.value].type === COLOURED_COIN
+      ? colouredcoin_to_pups(amount_input.value)
+      : aloe_to_pups(amount_input.value);
 
     const trade = buy_or_sell.value === 1
-      ? newBuy(mojo, wallet_id.value)
-      : newSell(mojo, wallet_id.value);
+      ? newBuy(pups, wallet_id.value)
+      : newSell(pups, wallet_id.value);
 
     dispatch(addTrade(trade));
   }

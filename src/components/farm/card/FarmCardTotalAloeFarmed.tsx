@@ -3,7 +3,7 @@ import { Trans } from '@lingui/macro';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../../../modules/rootReducer';
 import FarmCard from './FarmCard';
-import { mojo_to_aloe } from '../../../util/aloe';
+import { pups_to_aloe } from '../../../util/aloe';
 import useCurrencyCode from '../../../hooks/useCurrencyCode';
 
 export default function FarmCardTotalAloeFarmed() {
@@ -20,7 +20,7 @@ export default function FarmCardTotalAloeFarmed() {
   const totalAloeFarmed = useMemo(() => {
     if (farmedAmount !== undefined) {
       const val = BigInt(farmedAmount.toString());
-      return mojo_to_aloe(val);
+      return pups_to_aloe(val);
     }
   }, [farmedAmount]);
 

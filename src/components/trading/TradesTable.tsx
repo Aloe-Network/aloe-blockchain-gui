@@ -3,7 +3,7 @@ import { Table } from '@aloe/core';
 import styled from 'styled-components';
 import { Trans } from '@lingui/macro';
 import { Box } from '@material-ui/core';
-import { mojo_to_aloe_string } from '../../util/aloe';
+import { pups_to_aloe_string } from '../../util/aloe';
 
 const Amount = styled(Box)`
   white-space: normal;
@@ -48,7 +48,7 @@ export default function TradesTable(props: Props) {
       ),
       amount: (
         <Amount>
-          {mojo_to_aloe_string(humanAmount)}
+          {pups_to_aloe_string(humanAmount)}
         </Amount>
       ),
     };

@@ -83,32 +83,32 @@ aloe_formatter.setFiat = (currency, rate, display = null) => {
   units.setUnit(currency, 1 / rate, display);
 };
 
-export const mojo_to_aloe = (mojo) => {
-  return aloe_formatter(Number.parseInt(mojo), 'mojo').to('aloe').value();
+export const pups_to_aloe = (pups) => {
+  return aloe_formatter(Number.parseInt(pups), 'pups').to('aloe').value();
 };
 
-export const aloe_to_mojo = (aloe) => {
+export const aloe_to_pups = (aloe) => {
   return aloe_formatter(Number.parseFloat(Number(aloe)), 'aloe')
-    .to('mojo')
+    .to('pups')
     .value();
 };
 
-export const mojo_to_aloe_string = (mojo) => {
-  return aloe_formatter(Number(mojo), 'mojo').to('aloe').toString();
+export const pups_to_aloe_string = (pups) => {
+  return aloe_formatter(Number(pups), 'pups').to('aloe').toString();
 };
 
-export const mojo_to_colouredcoin = (mojo) => {
-  return aloe_formatter(Number.parseInt(mojo), 'mojo')
+export const pups_to_colouredcoin = (pups) => {
+  return aloe_formatter(Number.parseInt(pups), 'pups')
     .to('colouredcoin')
     .value();
 };
 
-export const colouredcoin_to_mojo = (colouredcoin) => {
+export const colouredcoin_to_pups = (colouredcoin) => {
   return aloe_formatter(Number.parseFloat(Number(colouredcoin)), 'colouredcoin')
-    .to('mojo')
+    .to('pups')
     .value();
 };
 
-export const mojo_to_colouredcoin_string = (mojo) => {
-  return aloe_formatter(Number(mojo), 'mojo').to('colouredcoin').toString();
+export const pups_to_colouredcoin_string = (pups) => {
+  return aloe_formatter(Number(pups), 'pups').to('colouredcoin').toString();
 };

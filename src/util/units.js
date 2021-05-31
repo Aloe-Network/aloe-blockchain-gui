@@ -1,22 +1,22 @@
 const units = {
   aloe: 1,
-  mojo: 1 / 1e12,
+  pups: 1 / 1e12,
   colouredcoin: 1 / 1e9,
 };
 
 const aliases = {
-  aloe: ['ch', 'aloe', 'Aloe'],
-  mojo: ['mj', 'mojo'],
+  aloe: ['al', 'aloe', 'Aloe'],
+  pups: ['ps', 'pups'],
   colouredcoin: ['cc', 'colouredcoin'],
 };
 
 const display = {
   aloe: {
-    format: '{amount} CH',
+    format: '{amount} AL',
     fractionDigits: 12,
   },
-  mojo: {
-    format: '{amount} MJ',
+  pups: {
+    format: '{amount} PS',
     fractionDigits: 0,
   },
   colouredcoin: {

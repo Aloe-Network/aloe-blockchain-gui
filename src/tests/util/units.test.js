@@ -7,8 +7,8 @@ describe("units", () => {
 
       expect(result).toBe(1);
     });
-    it("gets unit of mojo", () => {
-      const result = units.getUnit("mojo");
+    it("gets unit of pups", () => {
+      const result = units.getUnit("pups");
 
       expect(result).toBe(1e-12);
     });
@@ -23,12 +23,12 @@ describe("units", () => {
       expect(result).toBe(1);
     });
     it("gets unit of aloe using alias", () => {
-      const result = units.getUnit("ch");
+      const result = units.getUnit("al");
 
       expect(result).toBe(1);
     });
-    it("gets unit of mojo using alias", () => {
-      const result = units.getUnit("mj");
+    it("gets unit of pups using alias", () => {
+      const result = units.getUnit("ps");
 
       expect(result).toBe(1e-12);
     });
@@ -50,15 +50,15 @@ describe("units", () => {
       const result = units.getDisplay("aloe");
 
       expect(result).toEqual({
-        format: "{amount} CH",
+        format: "{amount} AL",
         fractionDigits: 12
       });
     });
-    it("gets display of mojo", () => {
-      const result = units.getDisplay("mojo");
+    it("gets display of pups", () => {
+      const result = units.getDisplay("pups");
 
       expect(result).toEqual({
-        format: "{amount} MJ",
+        format: "{amount} PS",
         fractionDigits: 0
       });
     });
@@ -112,14 +112,14 @@ describe("units", () => {
     });
     it("updates an existing display", () => {
       units.setDisplay("aloe", {
-        format: "{amount} TXCH",
+        format: "{amount} ALOET",
         fractionDigits: 0
       });
 
       const result = units.getDisplay("aloe");
 
       expect(result).toEqual({
-        format: "{amount} TXCH",
+        format: "{amount} ALOET",
         fractionDigits: 0
       });
     });
