@@ -1,5 +1,5 @@
 # aloe-blockchain
-![Alt text](https://www.aloe.net/img/aloe_logo.svg)
+![Alt text](https://www.aloecoin.org/s/aloe_logo.png)
 
 ![GitHub contributors](https://img.shields.io/github/contributors/Aloe-Network/aloe-blockchain?logo=GitHub)
 
